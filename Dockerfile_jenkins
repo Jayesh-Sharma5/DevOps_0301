@@ -1,0 +1,15 @@
+rm -rf docker-build
+mkdir docker-build
+cd docker-build
+whoami
+cp /var/lib/jenkins/workspace/compose/target/addressbook.war .
+touch Dockerfile
+cat <<EOT>>Dockerfile
+FROM tomcat
+ADD addressbook.war /usr/local/tomcat/webapps
+EXPOSE 8080
+CMD "catalina.sh" "run"
+EOT
+sudo docker build -t gobinath .
+sudo docker run -itd --name edureka -p 81:8080 gobinath
+
