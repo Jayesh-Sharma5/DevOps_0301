@@ -1,0 +1,57 @@
+helm repo add my-release oci://registry-1.docker.io/bitnamicharts/nginx
+  499  helm search repo nginx
+  500  kubectl get all
+  501  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  502  helm repo list
+  503  helm repo update
+  504  helm search repo promethus
+  505  helm search repo prometheus
+  506  cd /tmp
+  507  helm pull prometheus-community/prometheus
+  508  ls -lrt
+  509  helm pull --untar prometheus-community/prometheus
+  510  ls -lrt
+  511  cd prometheus/
+  512  ls
+  513  cat Chart.yaml 
+  514  ls
+  515  cd templates/
+  516  ls
+  517  cat service.yaml 
+  518  cd ..
+  519  ls
+  520  vi values.yaml 
+  521  vi sekhar.yaml
+  522  mv sekhar.yaml ../
+  523  cd ..
+  524  ls
+  525  helm install gobinath prometheus-community/prometheus -f sekhar.yaml --dry-run
+  526  kubectl get all
+  527  cloud auth login
+  528  gcloud auth login
+  529  kubectl get all
+  530  helm install gobinath prometheus-community/prometheus -f sekhar.yaml --dry-run
+  531  helm install gobinath prometheus-community/prometheus -f sekhar.yaml
+  532  helm list
+  533  kubectl get all
+  534  docker run -d --name=grafana -p 87:3000 grafana/grafana
+  535  docker ps -a
+  536  curl ifconfig.co
+  537  docker run -d --name=grafana1 -p 80:3000 grafana/grafana
+  538  curl 34.143.215.206
+  539  helm repo add grafana https://grafana.github.io/helm-charts
+  540  helm repo list
+  541  helm pull --untar grafana/grafana
+  542  ls
+  543  ls -lrt
+  544  cd grafana/
+  545  ls
+  546  vi values.yaml 
+  547  vi amit.yaml
+  548  helm install grafana grafana/grafana -f amit.yaml 
+  549  helm list
+  550  kubectl get all
+  551  kubectl get secrets
+  552  kubectl get secret -o yaml grafana
+  553  echo "YWRtaW4=" | base64 --decode
+  554  echo "QXU4d0VzeDFaR2hBOHVSNVhERWVPMDRPU1QyRmVLcXZ3UG5PM2NhNQ==" | base64 --decode
